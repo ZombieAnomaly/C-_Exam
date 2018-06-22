@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Dojo Activit Center";
+}
+
+<div class="wraper">
+    <form action="login" method="post" class="login">
+        <h1> Login </h1>
+        <h5 class="error">@ViewBag.LoginError</h5>
+        <label for"email">Email:</label>
+        <input type="email" required name="email"/>
+        <label for"password">Password:</label>
+        <input type="password" required name="password" minlength='8'/>
+        <div class="formbutton">
+            <button type="submit" id="loginB">Login</button>
+        </div>
+    </form>
+
+    <form action="register" method="post" class="register">
+        <h1> Register </h1>
+        <h5 class="error">@ViewBag.RegisterError</h5>
+        <label for"text">First Name:
+            <input type="text" required name="first_name"/>
+        </label>
+        <label for"password">Password:
+            <input type="password" required name="password" minlength='8'/>
+        </label>
+        <label for"text">Last Name:
+            <input type="text" required name="last_name"/>
+        </label>
+        <label for"passwordC">Password Confirmation:
+            <input type="password" required name="passwordC" minlength='8'/>
+        </label>
+        <label for"email">Email:
+            <input type="email" required name="email"/>
+        </label>
+        <div class="formbutton">
+            <button type="submit" id="RegisterB">Register</button>
+        </div>
+    </form>
+</div>

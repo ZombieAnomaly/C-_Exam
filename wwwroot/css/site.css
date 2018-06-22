@@ -1,0 +1,116 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.wrapper{
+    width:90%;
+    display: flex;
+    outline: 1px solid red;
+    flex-direction: column;
+}
+label{
+    display: block;
+    width:50%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+label input{
+    float:right;
+    margin-right:10px;
+}
+.login{
+    display:flex;
+    flex-direction: column;
+    width:40%;
+}
+.register{
+    margin-top:10px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:60%;
+}
+#loginB, #RegisterB{
+    width:20%;
+    margin:10px;
+}
+.formbutton, .NewActivityButton{
+    width:100%;
+    text-align: right;
+}
+.NewActivity{
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+}
+#newActivity{
+    text-align: right;
+}
+.login h1, .register h1{
+    width:100%;
+    display:block;
+}
+.error{
+    color:Red;
+    width:100%;
+}
+.HomeNav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom:1px solid black;
+}
+
+.HomeNav a{
+    vertical-align: bottom;
+    display: inline-block;
+    margin-top:25px;
+}
+
+.ActivityTable{
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+}
+.ActivityTable th{
+    border:1px solid black;
+}
+.ActivityTable tr:nth-child(even){
+    background-color: lightgray;
+}
+.ActivityTitle, .ActivitySubTitle{
+    margin-top:50px;
+    margin-bottom:10px;
+}

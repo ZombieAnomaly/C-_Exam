@@ -1,0 +1,10 @@
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/bin/Debug/netcoreapp2.0/C#Exam.deps.json
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/bin/Debug/netcoreapp2.0/C#Exam.runtimeconfig.json
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/bin/Debug/netcoreapp2.0/C#Exam.runtimeconfig.dev.json
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/bin/Debug/netcoreapp2.0/C#Exam.dll
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/bin/Debug/netcoreapp2.0/C#Exam.pdb
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/obj/Debug/netcoreapp2.0/C#Exam.csproj.CoreCompileInputs.cache
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/obj/Debug/netcoreapp2.0/C#Exam.AssemblyInfoInputs.cache
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/obj/Debug/netcoreapp2.0/C#Exam.AssemblyInfo.cs
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/obj/Debug/netcoreapp2.0/C#Exam.dll
+/Users/oem/Desktop/DojoAssignments/netCore/ASP/C#Exam/obj/Debug/netcoreapp2.0/C#Exam.pdb

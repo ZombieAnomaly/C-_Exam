@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Create New Activity";
+}
+<div class="HomeNav">
+    <h1> Dojo Activity Center</h1>
+    <a href="/Home">Home</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="wraper">
+    <h1 class="ActivityTitle">@ViewBag.ActivityDetails.Title</h1>
+
+    <h3 class="ActivitySubTitle"> Event Cordinator:</h3> 
+    <h4>@ViewBag.ActivityDetails.Owner.FirstName </h4>
+    <h3 class="ActivitySubTitle"> Description:</h3> 
+    <h4>@ViewBag.ActivityDetails.Description </h4>
+    <h3 class="ActivitySubTitle"> Participants:</h3> 
+    @for(int i=0; i < ViewBag.ActivityDetails.Participants.Count; i++)
+    {
+        <h4>@ViewBag.ActivityDetails.Participants[i].User.FirstName</h4>
+    }
+    @{
+        var joined = false;
+    }
+    @foreach(var p in ViewBag.ActivityDetails.Participants)
+    {
+        @if(p.UserId == ViewBag.myid){
+            joined = true;
+        }
+    }
+        @if(joined){
+            <form action="/leaveActivity/@ViewBag.ActivityDetails.ActivityId/@ViewBag.myid" method="get" class="NewActivity">
+                <div class="NewActivityButton">
+                    <button id="newActivity" type="submit">Leave Activity</button>
+                </div>
+            </form>
+        }else{
+            <form action="/joinActivity/@ViewBag.ActivityDetails.ActivityId" method="post" class="NewActivity">
+                <div class="NewActivityButton">
+                    <button id="newActivity" type="submit">Join Activity</button>
+                </div>
+            </form>
+        }
+
+        @if(ViewBag.ActivityDetails.UsersId == ViewBag.myid){
+             <form action="/deleteActivity/@ViewBag.ActivityDetails.ActivityId" method="get" class="NewActivity">
+                <div class="NewActivityButton">
+                    <button id="newActivity" type="submit">Delete Activity</button>
+                </div>
+            </form>           
+        }
+
+</div>

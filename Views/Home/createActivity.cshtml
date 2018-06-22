@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Create New Activity";
+}
+<div class="HomeNav">
+    <h1> Dojo Activity Center</h1>
+    <a href="/Home">Home</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="wraper">
+
+    <form action="createNewActivity" method="post" class="register">
+        <h1> Create An Activity</h1>
+        <h5 class="error">@ViewBag.CreationError</h5>
+        <label for"title">Title:
+            <input type="text" required minlength="2" name="title"/>
+        </label>
+        <label for"time">Date / Time:
+            <input type="datetime-local" required name="time"/>
+        </label>
+        <label for"text">Duration:
+            <input type="number" required name="duration"/>
+            <select required name="durationUnit">
+                <option value="hours">hours</option>
+                <option value="days">days</option>
+                <option value="minutes">minutes</option>
+            </select>
+        </label>
+        <label for"email">Description:
+            <input type="text" required name="description"/>
+        </label>
+        <div class="formbutton">
+            <button type="submit" id="RegisterB">Create Activity</button>
+        </div>
+    </form>
+</div>

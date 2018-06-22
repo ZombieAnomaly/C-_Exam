@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<div class="HomeNav">
+    <h1> Dojo Activity Center</h1>
+    <h3 >Welcome @ViewData["name"]!</h3>
+    <a href="/logout">Logout</a>
+</div>
+
+<table class="ActivityTable">
+    <tr>
+        <th>Activity</th>
+        <th>Date & Time</th>
+        <th>Duration</th>
+        <th>Event Cordinator</th>
+        <th>Number of Participants</th>
+        <th>Actions</th>
+    </tr>
+        
+        @foreach(Activities item in ViewBag.Activities)
+        {
+            int count = @item.Participants.Count;
+         <tr>
+            <td><a href="Activity/@item.ActivityId">@item.Title</a></td>
+            <td>@item.Time</td>
+            <td>@item.Duration minutes</td>
+            <td>@item.Owner.FirstName</td>
+            <td>@count</td>
+            @foreach(var p in item.Participants)
+            {
+                @if(p.UserId == ViewBag.myid)
+                {
+                    <td><a href="/leaveActivity/@item.ActivityId/@p.UserId">Leave</a></td>
+                }
+            }
+            <td><a href="/joinActivity/@item.ActivityId">Join</a></td>
+        </tr>
+        }
+</table>
+
+<form action="newActivity" method="get" class="NewActivity">
+    <div class="NewActivityButton">
+        <button id="newActivity" type="submit">Add New Activity</button>
+    </div>
+</form>
